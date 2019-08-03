@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+  labels:
+    name: redis-service
+    app: guestplaybook
+spec:
+  type: Loadbalancer
+  selector:
+    name: webapp-pod
+    app: guestplaybook
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
