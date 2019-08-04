@@ -21,4 +21,4 @@ spec:
       - name: webapp
         image: gcr.io/google-samples/gb-frontend:v4
         ports:
-        - containerPort: 3000
+        - containerPort: 80
