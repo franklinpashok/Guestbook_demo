@@ -8,17 +8,17 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      name: webapp-pod
       app: guestplaybook
+      tier: frontend
   template:
     metadata:
       name: webapp-pod
       labels:
-        name: webapp-pod
         app: guestplaybook
+        tier: frontend
     spec:
       containers:
       - name: webapp
         image: gcr.io/google-samples/gb-frontend:v4
         ports:
-        - containerPort: 80
+        - containerPort: 3000

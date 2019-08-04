@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-master-service
+  name: redis-slave-service
   labels:
     app: redis
-    role: master
+    role: slave
     tier: backend
 spec:
   selector:
     app: redis
-    role: master
+    role: slave
     tier: backend
   ports:
     - protocol: TCP
